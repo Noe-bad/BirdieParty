@@ -1,0 +1,86 @@
+<!-- creer-tournoi.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un tournoi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="website icon" type="png" href="logo-site.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>BirdieParty</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="tournois.html" class="nav-link">Tournois</a></li>
+                <li><a href="creer-tournoi.html" class="nav-link active">Créer un tournoi</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="form-container">
+        <div class="form-card">
+            <h2>Créer un tournoi</h2>
+            <form id="create-tournament-form">
+                <div class="form-group">
+                    <label class="form-label">Nom du tournoi</label>
+                    <input type="text" name="name" class="form-input" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Date</label>
+                        <input type="date" name="date" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Lieu</label>
+                        <input type="text" name="location" class="form-input" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Format</label>
+                        <select name="format" class="form-select" required>
+                            <option value="stroke play">Stroke Play</option>
+                            <option value="match play">Match Play</option>
+                            <option value="scramble">Scramble</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Nombre de joueurs max</label>
+                        <input type="number" name="maxPlayers" class="form-input" required min="1">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Nombre de trous</label>
+                        <select name="holes" id="holes" class="form-select" required>
+                            <option value="">Choisir</option>
+                            <option value="9">9</option>
+                            <option value="18">18</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Nombre de tours</label>
+                        <input type="number" name="rounds" class="form-input" value="1" min="1" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Ajouter des participants</label>
+                    <div style="display: flex; gap: 1rem;">
+                        <input type="text" id="participant-name" class="form-input" placeholder="Nom du joueur">
+                        <button type="button" id="add-participant" class="btn btn-success">Ajouter</button>
+                    </div>
+                    <div id="participants-list" class="participants-list"></div>
+                </div>
+                <div id="scorecard-container"></div>
+                <button type="submit" class="btn btn-primary mt-2">Créer le tournoi</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

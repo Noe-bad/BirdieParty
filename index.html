@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Tournois - Organisez vos tournois entre amis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="website icon" type="png" href="logo-site.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>BirdieParty</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="tournois.html" class="nav-link">Tournois</a>
+                </li>
+                <li class="nav-item">
+                    <a href="creer-tournoi.html" class="nav-link">Créer un tournoi</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Organisez vos tournois de golf entre amis</h1>
+            <p>Une plateforme professionnelle pour créer, gérer et suivre vos tournois de golf privés avec vos amis et collègues.</p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <h3 id="tournament-count">0</h3>
+                    <p>Tournois créés</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="player-count">0</h3>
+                    <p>Joueurs inscrits</p>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="creer-tournoi.html" class="btn-primary">Créer un tournoi</a>
+                <a href="tournois.html" class="btn-secondary">Voir les tournois</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section Enhanced -->
+    <section class="features">
+        <div class="container">
+            <div class="features-header">
+                <h2>Fonctionnalités</h2>
+                <p class="features-subtitle">Découvrez tous les outils professionnels pour organiser des tournois de golf exceptionnels</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Gestion Complète de Tournois</h3>
+                    <p>Créez et gérez vos tournois avec tous les détails : format stroke play/match play, nombre de trous, participants, handicaps et calendrier personnalisé.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Leaderboard Temps Réel</h3>
+                    <p>Suivez les scores et classements en direct et historique des performances.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⛳</div>
+                    <h3>Cartes de Parcours Détaillées</h3>
+                    <p>Configurez chaque trou avec par, longueur,  départs multiples et conditions météo pour une expérience authentique.</p>
+                </div>
+
+            </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

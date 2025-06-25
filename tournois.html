@@ -1,0 +1,34 @@
+<!-- tournois.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournois de Golf</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="website icon" type="png" href="logo-site.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>BirdieParty</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="tournois.html" class="nav-link active">Tournois</a></li>
+                <li><a href="creer-tournoi.html" class="nav-link">Créer un tournoi</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div style="margin: 4rem 0; display: flex; justify-content: space-between; align-items: center;">
+            <h2>Liste des tournois</h2>    
+        </div>
+        <div id="tournaments-container"></div>
+        <a href="creer-tournoi.html" class="btn btn-success">+ Créer un tournoi</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
