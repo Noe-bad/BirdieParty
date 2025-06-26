@@ -795,6 +795,8 @@ class GolfTournamentManager {
         return;
     }
 
+    const logoBase64 = "data:image/png;base64,...TON_BASE64_ICI...";
+
     const win = window.open('', '_blank');
 
     const courseHeaders = tournament.course.map(h => `<th>${h.hole}</th>`).join('');
@@ -828,8 +830,9 @@ class GolfTournamentManager {
                 font-family: sans-serif;
                 margin: 0;
                 padding: 0;
+                font-weight: bold;
             }
-            
+
             .scorecard-header {
                 display: flex;
                 justify-content: space-between;
@@ -855,6 +858,8 @@ class GolfTournamentManager {
                 border: 2px solid #000;
                 padding: 10px;
                 box-sizing: border-box;
+                color: black;
+                background-color: white;
             }
 
             .scorecard h2 {
@@ -887,7 +892,6 @@ class GolfTournamentManager {
                 color: white;
             }
 
-            /* Ligne Score - blanche pour écriture */
             tbody tr:last-child td {
                 background-color: white !important;
                 color: black !important;
@@ -964,12 +968,23 @@ class GolfTournamentManager {
         html += `<div class="page">${pageGroup}</div>`;
     }
 
-    html += `</body></html>`;
+    html += `
+        </body>
+        <script>
+            setTimeout(() => {
+                window.print();
+            }, 500);
+        </script>
+        </html>
+    `;
+
     win.document.write(html);
     win.document.close();
-    win.focus();
-    win.print();
 }
+
+
+
+
 
 
 async finishTournament(tournamentId) {
