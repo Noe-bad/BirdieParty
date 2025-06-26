@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golf Tournois - Organisez vos tournois entre amis</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="website icon" type="png" href="logo-site.png">
+    <!-- IMPORTANT: Supabase DOIT être chargé en premier -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -75,13 +76,13 @@
                 <div class="feature-card">
                     <div class="feature-icon">⛳</div>
                     <h3>Cartes de Parcours Détaillées</h3>
-                    <p>Configurez chaque trou avec par, longueur,  départs multiples et conditions météo pour une expérience authentique.</p>
+                    <p>Configurez chaque trou avec par, longueur, départs multiples et conditions météo pour une expérience authentique.</p>
                 </div>
-
             </div>
+        </div>
+    </section>
 
-
-
+    <!-- IMPORTANT: Script à la fin, après Supabase -->
     <script src="script.js"></script>
 </body>
 </html>
